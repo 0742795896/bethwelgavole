@@ -94,7 +94,7 @@ def index(request):
         'latest': latest,
         'form': form
     }
-    return render(request, 'index.html', context)
+    return render(request, 'blog.html', context)
 
 
 class PostListView(ListView):

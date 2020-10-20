@@ -23,7 +23,7 @@ from marketing.views import email_list_signup
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', index),
-   # path('', IndexView.as_view(), name='home'),
+    path('home', IndexView.as_view(), name='home'),
     # path('blog/', post_list, name='post-list'),
     path('', PostListView.as_view(), name='post-list'),
     path('search/', search, name='search'),
@@ -45,3 +45,5 @@ if settings.DEBUG:
                           document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
+
+
