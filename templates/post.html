@@ -68,11 +68,7 @@
                     <div class="comment-header d-flex justify-content-between">
                       <div class="user d-flex align-items-center">
                         <div class="image">
-                          {% if comment.user.author %}
-                          <img src="{{ comment.user.author.profile_picture.url }}" alt="..." class="img-fluid rounded-circle">
-                          {% else %}
-                          <img src="{% static 'img/user.svg' %}" alt="..." class="img-fluid rounded-circle">
-                          {% endif %}
+                          
                         </div>
                         <div class="title"><strong>{{ comment.user.username }}</strong><span class="date">{{ comment.timestamp|timesince }} ago</span></div>
                       </div>
