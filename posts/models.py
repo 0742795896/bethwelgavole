@@ -48,7 +48,7 @@ class Post(models.Model):
     # comment_count = models.IntegerField(default = 0)
     # view_count = models.IntegerField(default = 0)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    thumbnail = models.ImageField()
+    thumbnail = HTMLField()
     categories = models.ManyToManyField(Category)
     featured = models.BooleanField()
     previous_post = models.ForeignKey(
